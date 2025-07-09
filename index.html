@@ -23,38 +23,46 @@
     .note-section{background:var(--note-bg);border-radius:10px;padding:15px 20px;margin-top:30px}
     .note-section h3{margin-top:0}
     .note{font-style:italic;color:var(--text-color);line-height:1.6}
-    .server-list{display:none;margin:15px 0 0 0;text-align:left;list-style:none;padding-left:0}
+    /* status list */
+    .server-status{display:none;margin:15px 0 0 0;text-align:left;list-style:none;padding-left:0}
+    .server-status li{margin:6px 0;font-weight:600}
   </style>
 </head>
-<body data-theme="light"><header>
+<body data-theme="light">
+<header>
   <h1>📲 Jaidee VPN</h1>
-</header><div class="toggle-btn">
+</header>
+<div class="toggle-btn">
   <button onclick="toggleTheme()">🌗 Toggle Light/Dark Mode</button>
-</div><div class="container">  <div class="card">
+</div>
+<div class="container">
+  <div class="card">
     <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon"/>
     <h3>Telegram Channel</h3>
     <a href="https://t.me/jaideevpn" target="_blank">Go to Telegram</a>
-  </div>  <div class="card">
+  </div>
+  <div class="card">
     <img src="https://cdn-icons-png.flaticon.com/512/300/300218.png" alt="Play Store Icon"/>
     <h3>Download JaideeVPN</h3>
     <a href="https://play.google.com/store/apps/details?id=com.jaideevpn.net" target="_blank">Download Now</a>
-  </div>  <div class="card">
+  </div>
+  <div class="card">
     <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Messenger Icon"/>
     <h3>Contact via Messenger</h3>
     <a href="https://m.me/juehtet2025" target="_blank">Message Us</a>
-  </div>  <!-- 🔥 Server-List Card -->  <div class="card">
+  </div>  <!-- 🔥 Server Status Card -->  <div class="card">
     <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Server Icon"/>
-    <h3>VPN Server List</h3>
-    <button onclick="toggleServers()">Show / Hide Servers</button><ul id="serverList" class="server-list">
-  <li>🟢 🇸🇬 <strong>Singapore</strong> — Ping: 25 ms </li>
-  <li>🟢 🇹🇭 <strong>Thailand‑Premium</strong> — Ping: 15 ms </li>
-  <li>🟢 🇮🇳 <strong>India‑Mumbai</strong> — Ping: 48 ms </li>
-  <li>🟢 🇯🇵 <strong>Japan‑Tokyo</strong> — Ping: 78 ms </li>
-  <li>🟢 🇰🇷 <strong>Korea-Soul</strong> — Ping: 190 ms </li>
-</ul>
-
+    <h3>Server Status</h3>
+    <button onclick="toggleServers()">Show / Hide Status</button>
+    <ul id="serverStatus" class="server-status">
+      <li>🟢 🇸🇬 <strong>Singapore</strong> — Online</li>
+      <li>🟢 🇹🇭 <strong>Thailand‑Premium</strong> — Online</li>
+      <li>🟢 🇮🇳 <strong>India‑Mumbai</strong> — Online</li>
+      <li>🟡 🇯🇵 <strong>Japan‑Tokyo</strong> — Busy</li>
+      <li>🟢 🇰🇷 <strong>Korea‑Seoul</strong> — Online</li>
+    </ul>
   </div>
-  <!-- End Server-List Card -->  <!-- ✏️ Note Section Start -->  <div class="note-section">
+  <!-- End Server Status Card -->  <!-- ✏️ Note Section Start -->  <div class="note-section">
     <h3>📌 Note</h3>
     <div class="note">
       ❗ PlayStore ကဆော့ဝဲပဲဒေါင်းသုံးကြပါ<br>
@@ -68,14 +76,17 @@
       မေးစရာရှိပါက Telegram မှတဆင့်ဆက်သွယ်နိုင်ပါသည်။
     </div>
   </div>
-  <!-- ✏️ Note Section End --></div><script>
+  <!-- ✏️ Note Section End -->
+</div>
+<script>
   function toggleTheme(){
     const body=document.body;
     body.setAttribute("data-theme",body.getAttribute("data-theme")==="light"?"dark":"light");
   }
   function toggleServers(){
-    const list=document.getElementById("serverList");
+    const list=document.getElementById("serverStatus");
     list.style.display=list.style.display==="none"||list.style.display===""?"block":"none";
   }
-</script></body>
+</script>
+</body>
 </html>
