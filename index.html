@@ -1,52 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>JaideeVPN</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Website</title>
   <style>
     body {
-      background-color: #f0f0f0;
-      font-family: sans-serif;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f0f2f5;
+    }
+    header {
+      background: #0088cc;
+      color: white;
+      padding: 20px;
       text-align: center;
-      padding: 40px;
     }
-    .box {
-      background: white;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      max-width: 500px;
-      margin: auto;
     }
-    .button {
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 600px;
+      margin: 15px 0;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .card img {
+      width: 100%;
+      height: auto;
+    }
+    .card-content {
+      padding: 20px;
+      text-align: center;
+    }
+    .card-content a {
       display: inline-block;
+      margin-top: 10px;
       padding: 10px 20px;
-      background: #005eff;
+      background: #0088cc;
       color: white;
       text-decoration: none;
       border-radius: 5px;
-      margin: 10px 0;
     }
-    img {
-      max-width: 100%;
-      border-radius: 10px;
+    .card-content a:hover {
+      background: #006699;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>Welcome to JaideeVPN Website</h1>
-    <p>သင့်ရဲ့ Project, App, Software, Tools အသေးစိတ်ဖော်ပြနိုင်ပါတယ်။</p>
 
-    <!-- ✅ ပုံထည့်ထားတဲ့အပိုင်း -->
-    <img src="https://raw.githubusercontent.com/JHKVPN/app-ads/main/image/photo.jpg" alt="VPN Photo">
+<header>
+  <h1>📱 My App Website</h1>
+</header>
 
-    <br><br>
-    <a class="button" href="https://your-download-link.com">⬇ Download Now</a>
-
-    <h3>Contact Me</h3>
-    <p><a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p><a href="https://t.me/yourtelegram">Telegram</a></p>
+<div class="container">
+  
+  <!-- Telegram -->
+  <div class="card">
+    <img src="https://via.placeholder.com/600x300?text=Telegram+Channel" alt="Telegram Banner"/>
+    <div class="card-content">
+      <h2>Join our Telegram</h2>
+      <a href="https://t.me/YourChannel" target="_blank">Go to Telegram</a>
+    </div>
   </div>
+
+  <!-- Download -->
+  <div class="card">
+    <img src="https://via.placeholder.com/600x300?text=Download+App" alt="Download App"/>
+    <div class="card-content">
+      <h2>Download the App</h2>
+      <a href="https://your-download-link.com" target="_blank">Download Now</a>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="card">
+    <img src="https://via.placeholder.com/600x300?text=Contact+Us" alt="Contact Us"/>
+    <div class="card-content">
+      <h2>Contact Us</h2>
+      <a href="mailto:support@example.com">Email Support</a>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
