@@ -3,77 +3,83 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dark Mode UI</title>
+  <title>Jaidee VPN</title>
   <style>
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f9f9f9;
+      --note-bg: #eeeeee;
+    }
+    [data-theme="dark"] {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1f1f1f;
+      --note-bg: #2a2a2a;
+    }
     body {
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #121212;
-      color: #ffffff;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: 0.3s;
     }
     header {
-      background-color: #1f1f1f;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 24px;
-    }
-    nav a {
-      color: #ffffff;
-      text-decoration: none;
-      margin: 0 10px;
-      font-size: 16px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-    }
-    .card {
-      background-color: #1f1f1f;
-      border-radius: 10px;
-      margin-bottom: 20px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    }
-    .card img {
-      width: 100%;
-      height: auto;
-    }
-    .card-content {
-      padding: 20px;
+      background-color: #007bff;
+      color: white;
+      padding: 15px;
       text-align: center;
     }
-    .card-content a {
+    .toggle-btn {
+      margin: 10px auto;
+      text-align: center;
+    }
+    .toggle-btn button {
+      padding: 10px 20px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .card {
+      background-color: var(--card-bg);
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      margin-bottom: 20px;
+      overflow: hidden;
+      text-align: center;
+      padding: 20px;
+    }
+    .card img {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 15px;
+    }
+    .card h3 {
+      margin: 10px 0;
+    }
+    .card a {
       display: inline-block;
       margin-top: 10px;
       padding: 10px 20px;
-      background: #03a9f4;
-      color: #fff;
+      background: #007bff;
+      color: white;
       text-decoration: none;
       border-radius: 5px;
     }
-    .card-content a:hover {
-      background: #0288d1;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #1f1f1f;
-      border-top: 1px solid #333;
-      margin-top: 40px;
+    .card a:hover {
+      background: #0056b3;
     }
     .note-section {
-      background-color: #2a2a2a;
-      padding: 20px;
+      background-color: var(--note-bg);
       border-radius: 10px;
+      padding: 15px 20px;
       margin-top: 30px;
     }
     .note-section h3 {
@@ -81,47 +87,61 @@
     }
     .note {
       font-style: italic;
-      color: #bbbbbb;
+      color: var(--text-color);
+      line-height: 1.6;
     }
   </style>
 </head>
-<body>
+<body data-theme="light">
 
-<header>
-  <h1>📱 My App</h1>
-  <nav>
-    <a href="https://t.me/YourChannel" target="_blank">Telegram</a>
-    <a href="https://your-apk-link.com" target="_blank">Download APK</a>
-    <a href="https://m.me/YourMessenger" target="_blank">Messenger</a>
-  </nav>
-</header>
+  <header>
+    <h1>📲 Jaidee VPN</h1>
+  </header>
 
-<div class="container">
-
-  <div class="card">
-    <img src="https://via.placeholder.com/800x300?text=Welcome+to+My+App" alt="Banner"/>
-    <div class="card-content">
-      <h2>Welcome!</h2>
-      <p>Thanks for visiting our website. You can join Telegram, download the APK, or contact us via Messenger.</p>
-    </div>
+  <div class="toggle-btn">
+    <button onclick="toggleTheme()">🌗 Toggle Light/Dark Mode</button>
   </div>
 
-  <!-- ✏️ Note Section Start -->
-  <div class="note-section">
-    <h3>📌 Note</h3>
-    <div class="note">
-      ❗ ဤ App သည် သင်တန်းလေ့လာရေးအတွက်သာဖြစ်ပါသည်။<br>
-      VPN ကို မမှန်ကန်သောနည်းဖြင့်အသုံးပြုခြင်းကို တားမြစ်ပါသည်။<br>
-      မေးစရာရှိပါက Telegram မှတဆင့်ဆက်သွယ်နိုင်ပါသည်။
+  <div class="container">
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram Icon"/>
+      <h3>Join our Telegram</h3>
+      <a href="https://t.me/YourChannel" target="_blank">Go to Telegram</a>
     </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2907/2907253.png" alt="Download Icon"/>
+      <h3>Download JaideeVPN</h3>
+      <a href="https://your-apk-link.com" target="_blank">Download Now</a>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Messenger Icon"/>
+      <h3>Contact via Messenger</h3>
+      <a href="https://m.me/YourMessengerPage" target="_blank">Message Us</a>
+    </div>
+
+    <!-- ✏️ Note Section Start -->
+    <div class="note-section">
+      <h3>📌 Note</h3>
+      <div class="note">
+        ❗ ဤ App သည် သင်တန်းလေ့လာရေးအတွက်သာဖြစ်ပါသည်။<br>
+        VPN ကို မမှန်ကန်သောနည်းဖြင့်အသုံးပြုခြင်းကို တားမြစ်ပါသည်။<br>
+        မေးစရာရှိပါက Telegram မှတဆင့်ဆက်သွယ်နိုင်ပါသည်။
+      </div>
+    </div>
+    <!-- ✏️ Note Section End -->
+
   </div>
-  <!-- ✏️ Note Section End -->
 
-</div>
-
-<footer>
-  © 2025 My App. All rights reserved.
-</footer>
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const current = body.getAttribute("data-theme");
+      body.setAttribute("data-theme", current === "light" ? "dark" : "light");
+    }
+  </script>
 
 </body>
 </html>
