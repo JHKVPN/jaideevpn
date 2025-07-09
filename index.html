@@ -3,33 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Website</title>
+  <title>Dark Mode UI</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background: #f0f2f5;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #ffffff;
     }
     header {
-      background: #0088cc;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background-color: #1f1f1f;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 16px;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 30px;
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
     }
     .card {
-      background: white;
-      width: 90%;
-      max-width: 600px;
-      margin: 15px 0;
+      background-color: #1f1f1f;
       border-radius: 10px;
+      margin-bottom: 20px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .card img {
       width: 100%;
@@ -43,71 +55,72 @@
       display: inline-block;
       margin-top: 10px;
       padding: 10px 20px;
-      background: #0088cc;
-      color: white;
+      background: #03a9f4;
+      color: #fff;
       text-decoration: none;
       border-radius: 5px;
     }
     .card-content a:hover {
-      background: #006699;
+      background: #0288d1;
     }
     footer {
-      background: #ffffff;
       text-align: center;
       padding: 20px;
-      font-size: 14px;
-      color: #333;
-      border-top: 1px solid #ccc;
+      background-color: #1f1f1f;
+      border-top: 1px solid #333;
+      margin-top: 40px;
+    }
+    .note-section {
+      background-color: #2a2a2a;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+    .note-section h3 {
+      margin-top: 0;
     }
     .note {
-      margin-top: 10px;
-      color: #666;
       font-style: italic;
+      color: #bbbbbb;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>📱 JaideeVPN Website</h1>
+  <h1>📱 My App</h1>
+  <nav>
+    <a href="https://t.me/YourChannel" target="_blank">Telegram</a>
+    <a href="https://your-apk-link.com" target="_blank">Download APK</a>
+    <a href="https://m.me/YourMessenger" target="_blank">Messenger</a>
+  </nav>
 </header>
 
 <div class="container">
-  
-  <!-- Telegram -->
+
   <div class="card">
-    <img src="https://via.placeholder.com/600x300?text=Telegram+Channel" alt="Telegram Banner"/>
+    <img src="https://via.placeholder.com/800x300?text=Welcome+to+My+App" alt="Banner"/>
     <div class="card-content">
-      <h2>Join our Telegram</h2>
-      <a href="https://t.me/jaideevpn" target="_blank">Go to Telegram</a>
+      <h2>Welcome!</h2>
+      <p>Thanks for visiting our website. You can join Telegram, download the APK, or contact us via Messenger.</p>
     </div>
   </div>
 
-  <!-- Download -->
-  <div class="card">
-    <img src="https://via.placeholder.com/600x300?text=Download+App" alt="Download App"/>
-    <div class="card-content">
-      <h2>Download JaideeVPN</h2>
-      <a href="https://play.google.com/store/apps/details?id=com.jaideevpn.net" target="_blank">Download Now</a>
+  <!-- ✏️ Note Section Start -->
+  <div class="note-section">
+    <h3>📌 Note</h3>
+    <div class="note">
+      ❗ ဤ App သည် သင်တန်းလေ့လာရေးအတွက်သာဖြစ်ပါသည်။<br>
+      VPN ကို မမှန်ကန်သောနည်းဖြင့်အသုံးပြုခြင်းကို တားမြစ်ပါသည်။<br>
+      မေးစရာရှိပါက Telegram မှတဆင့်ဆက်သွယ်နိုင်ပါသည်။
     </div>
   </div>
-
-  <!-- Contact -->
-  <div class="card">
-    <img src="https://via.placeholder.com/600x300?text=Contact+Us" alt="Contact Us"/>
-    <div class="card-content">
-      <h2>Admin ဆက်သွယ်ရန်</h2>
-      <a href="juehtet272@gmail.com">Email Support</a>
-    </div>
-  </div>
+  <!-- ✏️ Note Section End -->
 
 </div>
 
 <footer>
   © 2025 My App. All rights reserved.
-  <div class="note">
-    Note: We do not store any user data. Contact us for support or questions.
-  </div>
 </footer>
 
 </body>
