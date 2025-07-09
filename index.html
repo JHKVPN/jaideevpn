@@ -60,6 +60,8 @@
       width: 70px;
       height: 70px;
       margin-bottom: 15px;
+      user-select: none;
+      pointer-events: none;
     }
     .card h3 {
       margin: 10px 0;
@@ -90,6 +92,13 @@
       color: var(--text-color);
       line-height: 1.6;
     }
+    .small-logo {
+      width: 100px;
+      height: auto;
+      margin-top: 10px;
+      user-select: none;
+      pointer-events: none;
+    }
   </style>
 </head>
 <body data-theme="light">
@@ -111,10 +120,12 @@
     </div>
 
     <div class="card">
-      <!-- ✅ Logo image updated here -->
+      <!-- ✅ JaideeVPN logo -->
       <img src="jaidee-vpn-logo.png" alt="Jaidee VPN Logo"/>
       <h3>Download JaideeVPN</h3>
       <a href="https://your-apk-link.com" target="_blank">Download Now</a>
+      <!-- ✅ Play Store logo fixed -->
+      <img class="small-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Google_Play_Store_badge_EN.svg/512px-Google_Play_Store_badge_EN.svg.png" alt="Get it on Google Play">
     </div>
 
     <div class="card">
