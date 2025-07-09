@@ -4,117 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Jaidee VPN - Server List</title>
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f4f6f9;
-      margin: 0;
-      padding: 20px;
-      color: #333;
-    }
-
-    .container {
-      max-width: 800px;
-      margin: auto;
-    }
-
-    h1 {
-      text-align: center;
-      color: #0099cc;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    th, td {
-      padding: 15px;
-      text-align: left;
-      border-bottom: 1px solid #eee;
-    }
-
-    th {
-      background-color: #0099cc;
-      color: white;
-    }
-
-    tr:hover {
-      background-color: #f1f1f1;
-    }
-
-    .online {
-      color: green;
-      font-weight: bold;
-    }
-
-    .offline {
-      color: red;
-      font-weight: bold;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-
-    @media(max-width: 600px) {
-      th, td {
-        font-size: 14px;
-        padding: 10px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>🌐 Jaidee VPN Server List</h1>
+    <div class="links">
+      <a href="https://play.google.com/store/apps/details?id=com.jaideevpn.net" target="_blank">📥 Download App</a> |
+      <a href="https://t.me/jaideevpn" target="_blank">💬 Telegram</a>
+    </div>
     <table>
       <thead>
         <tr>
-          <th>Location</th>
+          <th>Country</th>
           <th>IP Address</th>
           <th>Protocol</th>
           <th>Status</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>Singapore</td>
-          <td>sg1.jaidee.site</td>
-          <td>UDP 443</td>
-          <td class="online">Online</td>
-        </tr>
-        <tr>
-          <td>Japan</td>
-          <td>jp1.jaidee.site</td>
-          <td>TCP 80</td>
-          <td class="offline">Offline</td>
-        </tr>
-        <tr>
-          <td>Germany</td>
-          <td>de1.jaidee.site</td>
-          <td>VLESS WS</td>
-          <td class="online">Online</td>
-        </tr>
-        <tr>
-          <td>USA</td>
-          <td>us1.jaidee.site</td>
-          <td>OpenVPN</td>
-          <td class="online">Online</td>
-        </tr>
+      <tbody id="serverTable">
+        <!-- Loaded by JS -->
       </tbody>
     </table>
-
-    <div class="footer">
-      &copy; 2025 Jaidee VPN | Powered by GitHub Pages
-    </div>
   </div>
+  <script src="js/main.js"></script>
 </body>
 </html>
