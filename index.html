@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -12,6 +13,7 @@
     }
     body{margin:0;font-family:'Segoe UI',sans-serif;background:var(--bg-color);color:var(--text-color);transition:.3s}
     header{background:#007bff;color:#fff;padding:15px;text-align:center}
+    .top-banner{width:100%;max-width:450px;display:block;margin:10px auto;border-radius:12px;box-shadow:0 4px 8px rgba(0,0,0,0.2)}
     .toggle-btn{margin:10px auto;text-align:center}
     .toggle-btn button{padding:10px 20px;background:#444;color:#fff;border:none;border-radius:5px;cursor:pointer}
     .container{padding:20px;max-width:600px;margin:auto}
@@ -23,12 +25,16 @@
     .note-section{background:var(--note-bg);border-radius:10px;padding:15px 20px;margin-top:30px}
     .note-section h3{margin-top:0}
     .note{font-style:italic;color:var(--text-color);line-height:1.6}
-    /* status list */
     .server-status{display:none;margin:15px 0 0 0;text-align:left;list-style:none;padding-left:0}
     .server-status li{margin:6px 0;font-weight:600}
   </style>
 </head>
 <body data-theme="light">
+
+<!-- ✅ New inserted banner images just below <body> -->
+<img src="https://raw.githubusercontent.com/JHKVPN/app-ads/main/image/serverlist.jpg" alt="Server List" class="top-banner">
+<img src="https://raw.githubusercontent.com/JHKVPN/app-ads/main/image/connected.jpg" alt="Connected UI" class="top-banner">
+
 <header>
   <h1>📲 Jaidee VPN</h1>
 </header>
@@ -50,7 +56,8 @@
     <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Messenger Icon"/>
     <h3>Contact via Messenger</h3>
     <a href="https://m.me/juehtet2025" target="_blank">Message Us</a>
-  </div>  <!-- 🔥 Server Status Card -->  <div class="card">
+  </div>
+  <div class="card">
     <img src="https://cdn-icons-png.flaticon.com/512/1006/1006771.png" alt="Server Icon"/>
     <h3>Server Status</h3>
     <button onclick="toggleServers()">Show / Hide Status</button>
@@ -62,7 +69,7 @@
       <li>🟢 🇰🇷 <strong>Korea‑Seoul</strong> — Online</li>
     </ul>
   </div>
-  <!-- End Server Status Card -->  <!-- ✏️ Note Section Start -->  <div class="note-section">
+  <div class="note-section">
     <h3>📌 Note</h3>
     <div class="note">
       ❗ PlayStore ကဆော့ဝဲပဲဒေါင်းသုံးကြပါ<br>
@@ -76,7 +83,6 @@
       မေးစရာရှိပါက Telegram မှတဆင့်ဆက်သွယ်နိုင်ပါသည်။
     </div>
   </div>
-  <!-- ✏️ Note Section End -->
 </div>
 <script>
   function toggleTheme(){
