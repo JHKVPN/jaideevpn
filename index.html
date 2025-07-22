@@ -32,9 +32,9 @@
             --dark-color: #34495e;
             --light-color: #bdc3c7;
             --text-color: #ecf0f1;
-            --bg-color: #1a1a2e;
-            --card-bg: #16213e;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
             --excellent-color: #27ae60;
             --good-color: #2980b9;
             --highload-color: #d35400;
@@ -56,11 +56,7 @@
             background-color: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
-            background-image: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
-        }
-
-        [data-theme="dark"] body {
-            background-image: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background-image: linear-gradient(135deg, var(--bg-color) 0%, var(--card-bg) 100%);
         }
 
         .container {
@@ -141,11 +137,7 @@
             box-shadow: var(--shadow);
             text-align: center;
             width: 280px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .download-card {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .download-card img {
@@ -186,11 +178,6 @@
             overflow: hidden;
             position: relative;
             min-height: 300px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .image-space {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
         }
 
         .image-space img {
@@ -214,11 +201,7 @@
             box-shadow: var(--shadow);
             position: relative;
             overflow: hidden;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .server-card {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .server-card h3 {
@@ -275,13 +258,9 @@
 
         .progress-bar {
             height: 10px;
-            background-color: #e0e0e0;
+            background-color: var(--bg-color);
             border-radius: 5px;
             overflow: hidden;
-        }
-
-        [data-theme="dark"] .progress-bar {
-            background-color: #2c3e50;
         }
 
         .progress-fill {
@@ -309,11 +288,7 @@
             box-shadow: var(--shadow);
             margin-bottom: 30px;
             text-align: center;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .total-online {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .total-online h2 {
@@ -345,11 +320,7 @@
             padding: 20px;
             box-shadow: var(--shadow);
             margin-top: 30px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .public-message {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .public-message h2 {
@@ -359,12 +330,8 @@
 
         .message-content {
             padding: 15px;
-            background-color: rgba(0, 0, 0, 0.05);
+            background-color: rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-        }
-
-        [data-theme="dark"] .message-content {
-            background-color: rgba(255, 255, 255, 0.05);
         }
 
         .subscription-code {
@@ -373,12 +340,8 @@
             align-items: center;
             margin: 10px 0;
             padding: 10px;
-            background-color: rgba(0, 0, 0, 0.03);
+            background-color: rgba(0, 0, 0, 0.1);
             border-radius: 5px;
-        }
-
-        [data-theme="dark"] .subscription-code {
-            background-color: rgba(255, 255, 255, 0.03);
         }
 
         .copy-btn {
@@ -479,6 +442,10 @@
             color: var(--text-color);
             opacity: 0.7;
             font-size: 14px;
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .ping {
@@ -493,11 +460,7 @@
             padding: 20px;
             box-shadow: var(--shadow);
             margin-bottom: 30px;
-            background: linear-gradient(135deg, rgba(255,255,255,0.9) 0%, rgba(240,240,240,0.9) 100%);
-        }
-
-        [data-theme="dark"] .graph-section {
-            background: linear-gradient(135deg, rgba(22,33,62,0.9) 0%, rgba(26,26,46,0.9) 100%);
+            background: linear-gradient(135deg, var(--card-bg) 0%, var(--bg-color) 100%);
         }
 
         .graph-section h2 {
@@ -519,10 +482,6 @@
             background-color: rgba(46, 204, 113, 0.1);
             border-radius: 5px;
             margin-top: 15px;
-        }
-
-        [data-theme="dark"] .graph-alive {
-            background-color: rgba(46, 204, 113, 0.2);
         }
 
         .alive-dot {
@@ -1250,6 +1209,31 @@
             }
         });
 
+        // Auto theme based on time
+        function checkTimeForTheme() {
+            const now = new Date();
+            const hours = now.getHours();
+            // 6am to 6pm is day time (light mode)
+            const isDayTime = hours >= 6 && hours < 18;
+            
+            const currentTheme = document.body.getAttribute('data-theme');
+            const desiredTheme = isDayTime ? 'light' : 'dark';
+            
+            if (currentTheme !== desiredTheme) {
+                document.body.setAttribute('data-theme', desiredTheme);
+                const icon = themeToggle.querySelector('i');
+                if (desiredTheme === 'dark') {
+                    icon.classList.remove('fa-moon');
+                    icon.classList.add('fa-sun');
+                    localStorage.setItem('theme', 'dark');
+                } else {
+                    icon.classList.remove('fa-sun');
+                    icon.classList.add('fa-moon');
+                    localStorage.setItem('theme', 'light');
+                }
+            }
+        }
+
         // Check for saved theme preference
         const savedTheme = localStorage.getItem('theme') || 'light';
         document.body.setAttribute('data-theme', savedTheme);
@@ -1392,11 +1376,13 @@
         setInterval(updateClock, 1000);
 
         // Initialize graph
-        initializeGraph();
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeGraph();
+        });
 
-        // Update server status every 60 seconds (1 minute)
+        // Update server status every 3 minutes (180000 milliseconds)
         updateServerStatus();
-        setInterval(updateServerStatus, 60000);
+        setInterval(updateServerStatus, 180000);
 
         // Update ping times every 5 seconds
         updatePingTimes();
@@ -1404,6 +1390,19 @@
 
         // Update graph every 5 seconds
         setInterval(updateGraph, 5000);
+
+        // Check time for theme every minute
+        checkTimeForTheme();
+        setInterval(checkTimeForTheme, 60000);
+
+        // Initialize everything when page loads
+        window.onload = function() {
+            updateClock();
+            updateDate();
+            updateServerStatus();
+            updatePingTimes();
+            checkTimeForTheme();
+        };
     </script>
 </body>
 </html>
