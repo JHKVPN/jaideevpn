@@ -486,8 +486,19 @@
         }
 
         .ping {
-            color: #2ecc71;
             font-weight: bold;
+        }
+
+        .ping-excellent {
+            color: #2ecc71;
+        }
+
+        .ping-good {
+            color: #3498db;
+        }
+
+        .ping-high {
+            color: #e74c3c;
         }
 
         /* Graph Section */
@@ -654,6 +665,12 @@
                 <p>Get APK on Google Play</p>
                 <a href="https://play.google.com/store/apps/details?id=com.fastvpn.jk" class="download-btn">Download APK</a>
             </div>
+            <div class="download-card">
+                <img src="https://raw.githubusercontent.com/THANDARLIN2015/Jaideesite/main/image/kmoney.png" alt="Jaidee VPN Logo">
+                <h3>ငွေလွှဲချင်သူများအတွက်</h3>
+                <p>ယခုနေရာကိုနှိပ်ပါ</p>
+                <a href="https://kmoneyapp.site" class="download-btn">ငွေလဲ/ငွေလွှဲမည်</a>
+            </div>
         </div>
 
         <!-- Image Spaces -->
@@ -755,24 +772,24 @@
         // Server data that syncs across all devices
         let serverData = {
             servers: [
-                { name: "Thailand Server 1", country: "th", users: 45, uptime: "99.8%" },
-                { name: "Thailand Server 2", country: "th", users: 78, uptime: "99.6%" },
-                { name: "Thailand Server 3", country: "th", users: 32, uptime: "99.9%" },
-                { name: "Thailand Server 4", country: "th", users: 65, uptime: "99.7%" },
-                { name: "Thailand Server 5", country: "th", users: 89, uptime: "99.5%" },
-                { name: "Singapore Server 1", country: "sg", users: 28, uptime: "99.5%" },
-                { name: "Singapore Server 2", country: "sg", users: 54, uptime: "99.3%" },
-                { name: "Singapore Server 3", country: "sg", users: 42, uptime: "99.8%" },
-                { name: "Singapore Server 4", country: "sg", users: 67, uptime: "99.6%" },
-                { name: "Japan Server 1", country: "jp", users: 23, uptime: "99.9%" },
-                { name: "Japan Server 2", country: "jp", users: 56, uptime: "99.7%" },
-                { name: "Japan Server 3", country: "jp", users: 38, uptime: "99.8%" },
-                { name: "Japan Server 4", country: "jp", users: 72, uptime: "99.5%" },
-                { name: "India Server 1", country: "in", users: 34, uptime: "98.7%" },
-                { name: "India Server 2", country: "in", users: 61, uptime: "98.9%" },
-                { name: "India Server 3", country: "in", users: 47, uptime: "98.5%" },
-                { name: "Korea Server 1", country: "kr", users: 52, uptime: "99.2%" },
-                { name: "Korea Server 2", country: "kr", users: 68, uptime: "99.4%" }
+                { name: "Thailand Server 1 UDP/SSH", country: "th", users: 45, uptime: "99.8%" },
+                { name: "Thailand Server 2 UDP/SSH", country: "th", users: 78, uptime: "99.6%" },
+                { name: "Thailand Server 3 UDP/SSH", country: "th", users: 32, uptime: "99.9%" },
+                { name: "Thailand Server 4 UDP/SSH", country: "th", users: 65, uptime: "99.7%" },
+                { name: "Thailand Server 5 UDP/SSH", country: "th", users: 89, uptime: "99.5%" },
+                { name: "Singapore Server 1 UDP/SSH", country: "sg", users: 28, uptime: "99.5%" },
+                { name: "Singapore Server 2 UDP/SSH", country: "sg", users: 54, uptime: "99.3%" },
+                { name: "Singapore Server 3 UDP/SSH", country: "sg", users: 42, uptime: "99.8%" },
+                { name: "Singapore Server 4 UDP/SSH", country: "sg", users: 67, uptime: "99.6%" },
+                { name: "Japan Server 1 UDP/SSH", country: "jp", users: 23, uptime: "99.9%" },
+                { name: "Japan Server 2 UDP/SSH", country: "jp", users: 56, uptime: "99.7%" },
+                { name: "Japan Server 3 UDP/SSH", country: "jp", users: 38, uptime: "99.8%" },
+                { name: "Japan Server 4 UDP/SSH", country: "jp", users: 72, uptime: "99.5%" },
+                { name: "India Server 1 UDP/SSH", country: "in", users: 34, uptime: "98.7%" },
+                { name: "India Server 2 UDP/SSH", country: "in", users: 61, uptime: "98.9%" },
+                { name: "India Server 3 UDP/SSH", country: "in", users: 47, uptime: "98.5%" },
+                { name: "Korea Server 1 UDP/SSH", country: "kr", users: 52, uptime: "99.2%" },
+                { name: "Korea Server 2 UDP/SSH", country: "kr", users: 68, uptime: "99.4%" }
             ],
             lastUpdated: Date.now()
         };
@@ -870,8 +887,18 @@
         function updatePingTimes() {
             const pingElements = document.querySelectorAll('.ping');
             pingElements.forEach(el => {
-                const randomPing = Math.floor(Math.random() * 20) + 20; // Random ping between 20-40ms
+                const randomPing = Math.floor(Math.random() * 100) + 10; // Random ping between 10-110ms
                 el.textContent = `Ping: ${randomPing}ms`;
+                
+                // Update class based on ping value
+                el.className = 'ping';
+                if (randomPing < 50) {
+                    el.classList.add('ping-excellent');
+                } else if (randomPing < 80) {
+                    el.classList.add('ping-good');
+                } else {
+                    el.classList.add('ping-high');
+                }
             });
         }
 
@@ -918,7 +945,7 @@
                         </div>
                     </div>
                     <div class="server-info">
-                        <span class="ping">Ping: 0ms</span>
+                        <span class="ping ping-excellent">Ping: 0ms</span>
                         <span>Uptime: ${server.uptime}</span>
                     </div>
                 `;
@@ -1022,8 +1049,8 @@
             renderServerCards();
         });
 
-        // Update server status every 3 minutes (180000 milliseconds)
-        setInterval(updateServerStatus, 180000);
+        // Update server status every 2 minutes (120000 milliseconds)
+        setInterval(updateServerStatus, 120000);
 
         // Update ping times every 5 seconds
         updatePingTimes();
